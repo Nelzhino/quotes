@@ -8,15 +8,15 @@ function render(file, res) {
 }
 
 class QuotesController {
-    async index(req, res){
+    async index(req, res) {
         return render("quotes", res);
     }
 
-    async get(req, res){
+    async get(req, res) {
         return res.send(db);
     }
 
-    async all(req, res){
+    async add(req, res) {
         const { body: quotes } = req;
         const lastQuote = db[db.length - 1];
         const { id } = lastQuote;
